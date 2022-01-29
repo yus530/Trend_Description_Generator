@@ -1,0 +1,1 @@
+web: gunicorn tdg_app:app --log-file=-
