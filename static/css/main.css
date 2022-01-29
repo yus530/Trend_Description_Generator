@@ -1,0 +1,173 @@
+.header{
+	/*border: solid 1px black;*/
+	font-family: Century;
+	font-size: 55px;
+	padding-bottom: 1px;
+  	border-bottom: 6px double #ccc;
+}
+
+.content{
+	padding: 10px;
+	margin: 10px;
+/*	border: solid 1px black;*/
+}
+
+.top_boxes{
+	display: flex;
+	gap: 30px;
+	position: relative;
+}
+
+.data_box{
+/*	padding: 10px;*/
+	margin: 10px;
+	width: 500px;
+	height: 500px;
+/*	border: solid 1px black;*/
+}
+
+.graph_box{
+	padding: 10px;
+	margin: 10px;
+/*	margin-left: 30px;*/
+	width: 650px;
+	height: 500px;
+	/*border: solid 1px black;*/
+	border: 5px solid #ccc;
+  	border-radius: 4px;
+}
+
+.input_box{
+/*	padding: 5px;*/
+	margin:5px; 
+	width: 480px;
+	height: 420px;
+	padding: .5em ;
+	background-color: #f6f6f6;
+	border-radius: 6px;
+/*	border: solid 1px black;*/
+}
+
+.output_box{
+/*	padding: 5px;*/
+	margin:5px; 
+	width: 480px;
+	height: 420px;
+	padding: .5em ;
+	background-color: #f6f6f6;
+	border-radius: 6px;
+/*	border: solid 1px black;*/
+}
+
+.name_box{
+/*	padding: 10px;*/
+	margin: 10px;
+	padding-left: 25px;
+	width: 430px;
+/*	border: solid 1px black;*/
+}
+
+.item_value_box{
+	margin-top: 20px;
+	margin-left: 10px; 
+	padding-left: 50px;
+	width: 410px;
+	height: 355px;
+	/*overflow-y: scroll;*/ /*入力するデータが12を超えたらこれつけてスクロールできるようにする*/
+/*	border: solid 1px black;*/
+}
+
+.input_name{
+	width:300px; 
+}
+
+
+.input_item_value{
+
+}
+
+.button{
+	width: 100px;
+	height:40px;
+	margin: 10px;
+}
+
+.button_box_1{
+	width: 300px;
+	height: 60px;
+	margin: 5px;
+	margin-left: 65px;
+	padding-left: 50px;
+/*	border: solid 1px black;*/
+}
+
+.button_box_2{
+	width: 300px;
+	height: 60px;
+	margin: 5px;
+	margin-left: 40px;
+	padding-left: 135px;
+/*	border: solid 1px black;*/
+}
+
+.descrption_box{
+/*	padding: 10px;
+	margin: 10px;
+	border: solid 1px black;*/
+	padding: .5em .75em;
+  	background-color: #f6f6f6;
+  	border-radius: 6px;
+  	border: 10px double #ccc;
+}
+
+.table_box{
+	width:160px;
+	height:20px;
+	padding-left: 10px
+	border: solid 1px black;
+}
+
+.item{
+	background-color: white;
+	border: solid 1px black;
+}
+
+.value{
+	background-color: white;
+	border: solid 1px black;
+}
+
+.footer{
+	font-family: Century;
+	font-size: 20px;
+	margin: 10px;
+	padding: 10px;
+	border-right: 2px solid #ccc;
+ 	border-left: 7px solid #ccc;
+  	border-top: 2px solid #ccc;
+  	border-bottom: 2px solid #ccc;
+
+/*	border: solid 1px black;*/
+}
+
+body{
+	width: 1250px;
+	padding: 10px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+	width: 50%;
+}
+
+
+/*body {padding-left: 15em; padding-right: 15em; }*/
+
+/*参考　
+	枠 	https://saruwakakun.com/html-css/reference/box
+	仕組み　
+		https://nulab.com/ja/blog/nulab/css-basics-for-engineer-boxmodel/
+		http://www.htmq.com/csskihon/301.shtml
+		https://techacademy.jp/magazine/9647#ta-toc-2
+*/

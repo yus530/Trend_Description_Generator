@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block data %}
+<div class="output_box">
+    <div class="name_box">
+        Name of data: {{name}}<!-- </p>    -->
+    </div>
+    <div class="item_value_box">
+        <table>
+            <tr>
+                <th>Item</th><th>Value</th>
+            </tr>
+			<!-- https://lightgauge.net/language/python/flask-array-dic -->
+            {% for i in data %} <!-- ループさせてそれぞれ要素を取り出す -->
+			<tr>
+				<td class="item">
+					<div class="table_box" name="item">{{i[0]}}</div>
+				</td> <!-- apple google facebook amazonがそれぞれ表示される -->
+				<td class="value">
+					<div class="table_box" name="value">{{i[1]}}</div>
+				</td>
+			</tr>
+			{% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block button %}
+<div class="button_box_2">
+	<form action="/tdg_input" method="POST">
+	    <input type = "submit" class="button" value = "Back to Input" />
+	</form>
+</div>
+{% endblock %}
+
+{% block graph %}
+<script type="text/javascript">
+    var items =[];
+    var values = [];
+	/*https://admin-it.xyz/python/flask/flask-javascript-variable/*/
+	let graph_data = {{ graph | tojson }};
+    for (var i = 0; i < graph_data.length; i++) {
+      /*console.log(graph_data[i][0])*/
+      /*console.log(graph_data[i][1])*/
+      items.push(graph_data[i][0]);
+      values.push(graph_data[i][1])
+
+    }
+
+    var ctx = document.getElementById("mycanvas");
+    
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            /*labels: ['Jan','Feb','Mar','Apr','May'],*/
+            labels: items,
+            datasets: [{
+                label: 'Blue',
+/*              data: [0,0,0,0,0,0,0,0,0,0,0,0,],*/
+                data: values,
+                backgroundColor: '#48f',
+            }],
+        }
+    });
+</script>
+{% endblock %}
+
+{% block description %}
+{{result}}
+{% endblock %}

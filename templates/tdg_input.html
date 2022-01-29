@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+<!-- {% block name %} -->
+<!-- <form action="/test2_1" method="POST" style="display: inline" > --><!-- 
+    <input style="width: 350px" type = "text" name = "name" placeholder="Please Input"/> -->
+<!-- </form> -->
+<!-- {% endblock %} -->
+
+{% block data %}
+<form action="/tdg_output" method="POST">
+    <div class="input_box">
+        <div class="name_box">
+            Name of data: <input type = "text" name = "name" class="input_name" /><!-- </p>    -->
+        </div>
+        <div class="item_value_box">
+            <table>
+                    <tr>
+                        <th>Item</th><th>Value</th>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="January"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="February" /></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="March"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="April"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="May"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="June"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="July"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="August"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="September"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="October"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="November"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "text" name = "item" class="input_item_value" value="December"/></td>
+                        <td><input type ="text" name = "value" class="input_item_value" value="0"/></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <div class="button_box_1">
+        <input type = "submit" class="button" value = "submit" />
+        <input type="reset" class="button" value="reset">
+    </div>
+</form>
+{% endblock %}
+
+
+{% block button %}{% endblock %}
+{% block graph %}
+<script type="text/javascript">
+      var names = [];
+      var numbers = [];
+      var items = document.getElementsByName("item");
+      var values = document.getElementsByName("value");
+      for (var i = 0; i < items.length; i++) {
+        /*console.log(items[i]);*/
+        names.push(items[i].value);
+      }
+      for (var i = 0; i < values.length; i++) {
+        const idx = i;
+        /*console.log(numbers[i]);*/
+        numbers.push(values[i].value);
+      }
+
+    var ctx = document.getElementById("mycanvas");
+ /*   ctx.canvas.height = 300;*/
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            /*labels: ['Jan','Feb','Mar','Apr','May'],*/
+            labels: names,
+            datasets: [{
+                label: 'Blue',
+                /*data: [0,0,0,0,0,0,0,0,0,0,0,0,],
+*/              data: numbers,
+                backgroundColor: '#48f',
+            }],
+        }
+    });
+</script>
+{% endblock %}
+{% block description %}{% endblock %}
