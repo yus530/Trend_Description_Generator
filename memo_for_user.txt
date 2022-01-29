@@ -1,6 +1,8 @@
 2021/01/29
 このバージョンはまだエラ-になり得る要素を含んでいます。
-コード：
+This version still contains elements that can cause errors.
+
+code：
 
 GUI:
 データ入力フォームは12個ありますが、例えば10のデータを入力したいとき,
@@ -8,6 +10,12 @@ GUI:
 item欄(月などを入力する方)だけを空にすれば文章生成が上手くいくように
 改善しましたが、value欄も空にするとエラーが起こっていしまいます。
 そのため、このようなときのデータ入力は以下のようにしてください。
+
+There are 12 data entry forms, but if you want to enter 10 data items, for example,
+For example, if you want to input 10 data, leaving the rest of the input (item and value) both empty will cause an error. Right now, we have
+If you leave only the item field (the one to enter the month, etc.) empty, the text generation will work.
+However, if the value field is also empty, an error will occur.
+Therefore, data entry in such a case should be as follows:
 
 1	12
 2	415
